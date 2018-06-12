@@ -1,0 +1,17 @@
+<h3>All courses</h3>
+
+<%= link_to 'Add course', new_course_path %>
+
+
+
+<% @courses.each do |course| %>
+
+    <div>
+        Name: <%= course.name %> 
+    </div>
+    
+    <%= link_to 'Info', course_path(course) %>
+    <%= link_to 'Remove', course_path(course), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
+    <%= link_to 'Add Cohort', new_course_cohort_path(course) %>
+
+<% end %>

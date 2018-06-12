@@ -1,0 +1,23 @@
+<%= form_for @student do |f| %>
+    <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+    </div>
+    <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+    </div>
+    <div>
+        <%= f.label :date_of_birth %>
+        <%= f.date_field :date_of_birth %>
+    </div>
+    <div>
+        <%= f.label :highest_completed_education %>
+        <%= f.select :highest_completed_education, options_for_select(['HS', 'College', 'Masters', 'PHD']), prompt: 'Select One' %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+    
+    
+<% end %>

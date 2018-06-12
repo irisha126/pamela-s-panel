@@ -1,0 +1,16 @@
+<h2></h2>
+
+<%= link_to 'Add instructor', new_instructor_path %>
+
+
+
+<% @instructors.each do |instructor| %>
+
+    <div>
+        Name: <%= instructor.first_name %><%= instructor.last_name %> 
+    </div>
+    <%= link_to 'Info', instructor_path(instructor) %>
+    <%= link_to 'Remove', instructor_path(instructor), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
+    
+
+<% end %>

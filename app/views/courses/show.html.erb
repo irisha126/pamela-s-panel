@@ -1,0 +1,14 @@
+<h3>This is full info about course </h3>
+
+<div class="container">
+   <div class="row profile-info">
+       <div class="col-6 info">
+            <ul>
+                <li><strong>Name of Course:</strong>   <%= @course.name %></li>
+                <li><strong>Hours in Class:</strong>   <%= @course.hours_in_class %></li>
+            </ul>
+        </div>
+    </div>
+    <%= link_to 'Edit', edit_course_path %>
+    <%= link_to 'Back to Courses', courses_path %>
+</div>

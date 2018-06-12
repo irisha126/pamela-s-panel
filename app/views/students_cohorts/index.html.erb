@@ -1,0 +1,15 @@
+<h3>All student-cohorts</h3>
+
+<%= link_to 'Fill in cohort', new_students_cohort_path %>
+
+<% @students_cohorts.each do |students_cohort| %>
+
+    <div>
+        Name: <%= students_cohort.name %> 
+    </div>
+    
+    <%= link_to 'Info', students_cohort_path(student_cohort) %>
+    <%= link_to 'Remove', students_cohort_path(student_cohort), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
+   
+
+<% end %>

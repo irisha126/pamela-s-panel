@@ -1,0 +1,13 @@
+<%= form_for @student_cohort do |f| %>
+    <div>
+        <%= f.label :cohort %>
+        <%= f.select :cohort_id, options_for_select(@cohorts), prompt: 'Select One' %>
+    </div>
+    <div>
+        <%= f.label :student %>
+        <%= f.select :student_id, options_for_select(@students ), prompt: 'Select One' %>
+    </div>
+     <div>
+        <%= f.submit %>
+    </div>
+<% end %>

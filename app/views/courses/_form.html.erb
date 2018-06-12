@@ -1,0 +1,15 @@
+<%= form_for @course do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :hours_in_class %>
+        <%= f.number_field :hours_in_class %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+    
+    
+<% end %>

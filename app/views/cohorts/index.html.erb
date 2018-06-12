@@ -1,0 +1,12 @@
+<h3>All Cohorts</h3>
+
+<% @cohorts.each do |cohort| %>
+
+    <div>
+        Name: <%= cohort.name %> 
+    </div>
+    
+    <%= link_to 'Students Enrolled', enrolled_cohort_path(cohort) %>
+    
+
+<% end %>

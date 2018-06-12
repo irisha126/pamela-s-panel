@@ -1,0 +1,11 @@
+<h3>Students Enrolled </h3>
+    <% @cohort.students.each do |student| %>
+
+    <div>
+        Name: <%= student.first_name %><%= student.last_name %> 
+    </div>
+    <%= link_to 'Info', student_path(student) %>
+    <%= link_to 'Remove', student_path(student), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
+    
+
+<% end %>
