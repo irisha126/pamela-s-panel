@@ -5,7 +5,8 @@ class StudentsCohortsController < ApplicationController
     end
     
     def create
-         StudentsCohort.create(students_cohort_params)
+        student = Student.find(params[:student_id])
+         StudentsCohort.create(students_cohort_params)//??????????
         flash[:success] = 'New student has been added to ... cohort'
         redirect_to students_cohorts_path
     end
@@ -21,6 +22,7 @@ class StudentsCohortsController < ApplicationController
     end
     
     def show
+        @student_cohort = StudentsCohort.find(params[:id])
         @course = StudentsCohort.find(params[:id])
     end
     

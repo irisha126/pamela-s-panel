@@ -8,7 +8,14 @@
                 <li><strong>Last Name:</strong>   <%= @student.last_name %></li>
                 <li><strong>Birthday:</strong>   <%= @student.date_of_birth %></li>
                 <li><strong>Highest Completed Education:</strong>   <%= @student.highest_completed_education %></li>
-
+                <li><strong>Cohorts enrolled</strong>
+                    <ul> 
+                        <% @student.cohorts.each do |cohort| %>
+                            <li><%= cohort.name %></li>
+                        
+                    </ul>
+                    <% end %>
+                </li>
             </ul>
         </div>
     </div>
