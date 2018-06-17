@@ -5,7 +5,11 @@
         Name: <%= student.first_name %><%= student.last_name %> 
     </div>
     <%= link_to 'Info', student_path(student) %>
-    <%= link_to 'Remove', student_path(student), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
+<!--    %= link_to 'Remove', student_path(student), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %><br>-->
     
 
 <% end %>
+
+<div>
+    <%= link_to 'Enroll Student', new_students_cohort_path %>
+</div>

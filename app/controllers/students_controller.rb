@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+    before_action :authenticate_admin!
+	skip_before_action :verify_authenticity_token, only: [:destroy]
+    
     def index
         @students = Student.all
     end
@@ -11,6 +14,7 @@ class StudentsController < ApplicationController
     
     def new
         @student = Student.new
+        @cohorts = Cohort.all.map{|cohort| [cohort.name, cohort.id]}
     end
     
     def edit

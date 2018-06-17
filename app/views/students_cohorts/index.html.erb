@@ -2,7 +2,7 @@
 
 <%= link_to 'Fill in cohort', new_students_cohort_path %>
 
-<% @students_cohorts.each do |student| %>
+<% @students_cohorts.students each do |student| %>
 
     <div>
         Name: <%= student.name %> 
