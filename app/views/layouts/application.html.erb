@@ -10,7 +10,7 @@
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-     
+     <% unless @admin.nil? %>
      <nav class="navbar navbar-light navbar-1 white">
 
     <!-- Navbar brand -->
@@ -47,6 +47,7 @@
     <!-- Collapsible content -->
 
       </nav>
+      <% end %>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>

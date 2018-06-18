@@ -1,4 +1,28 @@
+<div class="container-fluid">
+    <div class="row all-home "> 
+        <div class="col-6 first-col"></div>
+        <div class="col-6 second-col">
+            <div class = 'access-buttons'>
+                <div>
+                    <p class = 'home-text'>To get access please</p>
+                </div>
+                <div>
+                    <%= button_to 'Sign Up', new_admin_registration_path, class: 'yellow-button' %>
+                </div>
 
-<%= link_to 'Sign Up', new_admin_registration_path %>
-<%= link_to 'Log In', new_admin_session_path %>
-<%= link_to 'Logout', destroy_admin_session_path, method: 'DELETE' %>
+                <div>
+                    <p class = 'home-text'>or</p>
+                </div>
+                <% unless @current_admin != nil %>
+                    <div>
+                        <%= button_to 'Log In', new_admin_session_path, class: 'yellow-button' %>
+                    </div>
+
+                <% else %>
+                    <%= link_to 'Logout', destroy_admin_session_path, method: 'DELETE' %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    
+</div>

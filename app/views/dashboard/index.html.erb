@@ -1,13 +1,37 @@
-<h1>Welcome</h1>
+<div class="container">
+<div class="row">
+
+<!-- <div class="auto-margin">-->
+  <% if admin_signed_in? %>
+    <h2>Welcome, <%#= @admin.first_name %><%#=@admin.last_name! %></h2><br>
+    <% end %>
+   
+    <div class="col-4 dashboard-image">
 <div>
+    <%= image_tag image_path('student.png'), class: 'icon' %>
     <%= link_to 'Students', students_path %>
 </div>
+</div>
+<div class="col-4 dashboard-image">
 <div>
+   <%= image_tag image_path('instructor.png'), class: 'icon' %>
     <%= link_to 'Instructors', instructors_path %>
 </div>
+     </div>
+     <div class="col-4 dashboard-image">
 <div>
+  
+   <%= image_tag image_path('cohort.png'), class: 'icon' %>
     <%= link_to 'Cohorts', cohorts_path %>
 </div>
+     </div>
+     <div class="col-4 dashboard-image">
 <div>
+  
+   <%= image_tag image_path('course.png'), class: 'icon' %>
     <%= link_to 'Courses', courses_path %>
+<!--</div>-->
+     </div>
+</div>
+</div>
 </div>
