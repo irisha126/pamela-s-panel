@@ -54,30 +54,11 @@
 
 <!--      </nav>-->
       <%# end %>
-    <div class="container">
-    <div class="row">
-    <% if admin_signed_in? %>
-<div class="sidenav">
-  <%= link_to 'Home', dashboard_path, class: 'nav-link' %> <span class="sr-only">(current)</span>
-  <%= link_to 'Students', students_path, class: 'nav-link' %>
-  <%= link_to 'Instructors', instructors_path, class: 'nav-link' %>
-  <%= link_to 'Cohorts', cohorts_path, class: 'nav-link' %>
-  <%= link_to 'Courses', courses_path, class: 'nav-link' %>
-  <%= link_to 'Logout', destroy_admin_session_path, method: 'DELETE', class: 'logout' %>
-</div>
-<% end %>
-<div class="main <%= 'push-left-200' if admin_signed_in? %>">
- <div class="hat">
+  
    <%= yield %>  
 
   
-  </div>
-      
- 
-</div>
-  
-   </div>   
-    </div>  
+    
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     

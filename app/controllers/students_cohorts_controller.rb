@@ -22,9 +22,9 @@ class StudentsCohortsController < ApplicationController
         @student_cohort = StudentsCohort.new
     end
     
-#    def edit
-#        @student_cohort = StudentsCohort.find(params[:id])
-#    end
+    def edit
+        @student_cohort = StudentsCohort.find(params[:id])
+    end
 #    
 #    def show
 #        @student_cohort = StudentsCohort.find(params[:id])

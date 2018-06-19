@@ -1,12 +1,28 @@
 <h3>All Cohorts</h3>
 
-<% @cohorts.each do |cohort| %>
 
-    <div>
-        Name: <%= cohort.name %> 
-    </div>
-    
-    <%= link_to 'Students Enrolled', enrolled_cohort_path(cohort) %>
-    
 
+<div class="container">
+
+
+<div class="row">
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
+   
+    <tr>
+      <th>Name</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @cohorts.each do |cohort| %>
+    <tr>
+      <td><%= cohort.name %></td>
+      <td><%= link_to 'Students Enrolled', enrolled_cohort_path(cohort) %></td>
+    </tr>
 <% end %>
+    </tbody>
+</table>
+</div>
+</div>
+

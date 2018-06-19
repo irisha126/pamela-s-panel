@@ -7,20 +7,20 @@
                     <p class = 'home-text'>To get access please</p>
                 </div>
                 <div>
-                    <%= button_to 'Sign Up', new_admin_registration_path, class: 'yellow-button' %>
+                    <%= button_to 'Sign Up', new_admin_registration_path, method:'get', class: 'yellow-button' %>
                 </div>
 
                 <div>
                     <p class = 'home-text'>or</p>
                 </div>
-                <% unless @current_admin != nil %>
+                <%# unless @current_admin != nil %>
                     <div>
-                        <%= button_to 'Log In', new_admin_session_path, class: 'yellow-button' %>
+                        <%= button_to 'Log In', new_admin_session_path, method: 'get', class: 'yellow-button' %>
                     </div>
 
-                <% else %>
+                <%# else %>
                     <%= link_to 'Logout', destroy_admin_session_path, method: 'DELETE' %>
-                <% end %>
+                <%# end %>
             </div>
         </div>
     </div>
