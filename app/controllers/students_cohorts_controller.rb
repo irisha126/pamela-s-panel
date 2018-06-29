@@ -1,9 +1,6 @@
 class StudentsCohortsController < ApplicationController
     before_action :authenticate_admin!
-    
-#    def index
-#        @students_cohorts = StudentsCohort.all
-#    end
+
     
     def create
        

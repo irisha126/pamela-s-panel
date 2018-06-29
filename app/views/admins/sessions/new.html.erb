@@ -6,7 +6,7 @@
  <h2 class ='centered'>Log in</h2>
   <%= image_tag image_path('login.png'), class: 'login-image' %>
   <div class="card-body">
-<!--      <p class="card-text">-->
+
        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %>
@@ -34,7 +34,6 @@
 
   </div>
   
-<!--    </p>-->
    </div> 
    
    

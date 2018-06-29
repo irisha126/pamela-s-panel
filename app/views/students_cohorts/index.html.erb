@@ -7,9 +7,9 @@
     <div>
         Name: <%= student.name %> 
     </div>
-    
+
     <%= link_to 'Info', students_cohort_path(student_cohort) %>
     <%= link_to 'Remove', students_cohort_path(student_cohort), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %>
-   
+
 
 <% end %>

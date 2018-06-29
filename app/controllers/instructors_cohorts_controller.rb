@@ -4,8 +4,6 @@ class InstructorsCohortsController < ApplicationController
         instructor = Instructor.find(instructors_cohort_params[:instructor_id])
         cohort = Cohort.find(instructors_cohort_params[:cohort_id])
         InstructorsCohort.create(instructors_cohort_params)
-#        student.students_cohorts.create(studens_cohort_params)
-        
         flash[:success] = 'New instructor has been added to ... cohort'
         redirect_to instructors_path
     end
