@@ -4,7 +4,7 @@
 <div class="container">
 
     <div class="row">
-        <%= link_to 'Add student', new_student_path %>
+        <%= link_to 'Add student', new_student_path, class: 'btn btn-warning nav-btn mb-3' %>
     </div>
     <div class="row">
         <table class="table table-striped table-hover">
@@ -20,8 +20,8 @@
                 <% @students.each do |student| %>
                     <tr>
                         <td><%= student.first_name %><%= student.last_name %></td>
-                        <td><%= link_to 'Info', student_path(student) %></td>
-                        <td><%= link_to 'Remove', student_path(student), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' } %></td>
+                        <td><%= link_to 'Info', student_path(student), class: 'mr-3' %></td>
+                        <td><%= link_to 'Remove', student_path(student), 'data-method': 'DELETE', 'data': { confirm: 'Are you sure?' }, class: 'mr-3' %></td>
                     </tr>
                 <% end %>
             </tbody>

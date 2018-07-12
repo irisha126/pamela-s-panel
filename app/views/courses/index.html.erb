@@ -19,9 +19,9 @@
                 <% @courses.each do |course| %>
                     <tr>
                         <td><%= course.name %></td>
-                        <td><%= link_to 'Info', course_path(course) %></td>
-                        <td><%= link_to 'Remove', course_path(course), method: :delete, remote: true, class: 'delete-thing' %></td>
-                        <td><%= link_to 'Add Cohort', new_course_cohort_path(course) %></td>
+                        <td><%= link_to 'Info', course_path(course), class: 'mr-2' %></td>
+                        <td><%= link_to 'Remove', course_path(course), method: :delete, remote: true, class: 'delete-thing mr-2' %></td>
+                        <td><%= link_to 'Add Cohort', new_course_cohort_path(course), class: 'mr-2' %></td>
                     </tr>
                 <% end %>
             </tbody>
